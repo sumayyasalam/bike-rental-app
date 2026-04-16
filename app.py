@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 import sklearn
 
-st.write("Cloud scikit-learn version:", sklearn.__version__)
+#st.write("Cloud scikit-learn version:", sklearn.__version__)
 
 st.title("🚲 Bike Rental Prediction App")
 st.write("Enter the values below to predict bike rental demand.")
