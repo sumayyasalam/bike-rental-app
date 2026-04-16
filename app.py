@@ -8,6 +8,23 @@ st.write("Cloud scikit-learn version:", sklearn.__version__)
 st.title("🚲 Bike Rental Prediction App")
 st.write("Enter the values below to predict bike rental demand.")
 
+# Set background color
+page_bg = """
+<style>
+[data-testid="stAppViewContainer"] {
+    background-color: #E3F2FD;  /* Light blue */
+}
+
+[data-testid="stHeader"] {
+    background-color: rgba(0,0,0,0); /* Transparent header */
+}
+
+</style>
+"""
+
+st.markdown(page_bg, unsafe_allow_html=True)
+
+
 # Load model
 try:
     model = joblib.load("best_model.pkl")
@@ -19,9 +36,9 @@ except Exception as e:
 
 # Input fields
 season = st.selectbox("Season (1–4)", [1, 2, 3, 4])
-temp = st.number_input("Temperature (°C)", min_value=0.0, max_value=50.0)
-humidity = st.number_input("Humidity (%)", min_value=0.0, max_value=100.0)
-windspeed = st.number_input("Wind Speed", min_value=0.0, max_value=60.0)
+temp = st.slider("Temperature (°C)", min_value=0.0, max_value=50.0)
+humidity = st.slider("Humidity (%)", min_value=0.0, max_value=100.0)
+windspeed = st.slider("Wind Speed", min_value=0.0, max_value=60.0)
 
 # Predict button
 if st.button("Predict"):
