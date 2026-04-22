@@ -45,6 +45,15 @@ ax.set_xlabel("Weekday (0 = Sunday)")
 ax.set_ylabel("Total Rentals")
 
 st.pyplot(fig)
+st.subheader("Season-wise Bike Rentals")
+
+fig, ax = plt.subplots(figsize=(8,5))
+sns.boxplot(data=df, x='season', y='cnt', palette='Set2', ax=ax)
+ax.set_title("Season-wise Bike Rentals")
+ax.set_xlabel("Season (1=Spring, 2=Summer, 3=Fall, 4=Winter)")
+ax.set_ylabel("Total Rentals")
+
+st.pyplot(fig)
 
 
 
