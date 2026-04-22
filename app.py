@@ -20,7 +20,7 @@ st.write("Below are some visual insights from the bike rental dataset.")
 st.subheader("Distribution of Total Bike Rentals")
 
 fig, ax = plt.subplots(figsize=(8,5))
-sns.histplot(df['total_count'], kde=True, color='teal', ax=ax)
+sns.histplot(df['cnt'], kde=True, color='teal', ax=ax)
 ax.set_title("Distribution of Total Bike Rentals")
 ax.set_xlabel("Total Rentals")
 ax.set_ylabel("Frequency")
