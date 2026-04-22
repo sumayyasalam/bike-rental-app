@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 import sklearn
-mport matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load data for EDA
