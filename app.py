@@ -54,6 +54,23 @@ ax.set_xlabel("Season (1=Spring, 2=Summer, 3=Fall, 4=Winter)")
 ax.set_ylabel("Total Rentals")
 
 st.pyplot(fig)
+st.subheader("Temperature vs Bike Rentals")
+
+fig, ax = plt.subplots(figsize=(8,5))
+sns.scatterplot(
+    data=df,
+    x='temp',
+    y='cnt',
+    hue='weathersit',
+    palette='coolwarm',
+    ax=ax
+)
+ax.set_title("Temperature vs Bike Rentals")
+ax.set_xlabel("Temperature (normalized)")
+ax.set_ylabel("Total Rentals")
+ax.legend(title="Weather Situation")
+
+st.pyplot(fig)
 
 
 
