@@ -82,6 +82,16 @@ sns.heatmap(numeric_df.corr(), annot=True, cmap='Blues', ax=ax)
 ax.set_title("Correlation Heatmap")
 
 st.pyplot(fig)
+st.subheader("Boxplots for Numerical Features")
+
+num_cols = ['temp', 'atemp', 'hum', 'windspeed', 'cnt']
+
+fig, ax = plt.subplots(figsize=(12,6))
+sns.boxplot(data=df[num_cols], ax=ax)
+ax.set_title("Boxplot for Numerical Features")
+ax.set_xticklabels(num_cols, rotation=45)
+
+st.pyplot(fig)
 
 
 #st.write("Cloud scikit-learn version:", sklearn.__version__)
