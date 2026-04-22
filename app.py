@@ -12,7 +12,7 @@ def load_data():
     return df
 
 df = load_data()
-st.write("Columns in dataset:", df.columns.tolist())
+
 
 st.write("Cloud scikit-learn version:", sklearn.__version__)
 st.header("📊 Exploratory Data Analysis")
