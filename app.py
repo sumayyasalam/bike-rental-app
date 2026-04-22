@@ -72,6 +72,16 @@ ax.legend(title="Weather Situation")
 
 st.pyplot(fig)
 
+st.subheader("Correlation Heatmap")
+
+# Select only numeric columns
+numeric_df = df.select_dtypes(include=['number'])
+
+fig, ax = plt.subplots(figsize=(10,6))
+sns.heatmap(numeric_df.corr(), annot=True, cmap='Blues', ax=ax)
+ax.set_title("Correlation Heatmap")
+
+st.pyplot(fig)
 
 
 #st.write("Cloud scikit-learn version:", sklearn.__version__)
