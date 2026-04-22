@@ -14,7 +14,7 @@ if page == "EDA":
     @st.cache_data
     def load_data():
         df = pd.read_csv("Dataset.csv")  
-    return df
+        return df
 
     df = load_data()
 
