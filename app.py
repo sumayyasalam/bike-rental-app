@@ -101,6 +101,15 @@ ax.set_xlabel("Weather Situation (1=Clear, 2=Mist, 3=Light Snow/Rain, 4=Heavy Ra
 ax.set_ylabel("Total Rentals")
 
 st.pyplot(fig)
+st.subheader("Working Day vs Total Rentals")
+
+fig, ax = plt.subplots(figsize=(6,4))
+sns.boxplot(x='workingday', y='cnt', data=df, ax=ax)
+ax.set_title("Working Day vs Total Rentals")
+ax.set_xlabel("Working Day (0 = No, 1 = Yes)")
+ax.set_ylabel("Total Rentals")
+
+st.pyplot(fig)
 
 
 #st.write("Cloud scikit-learn version:", sklearn.__version__)
