@@ -26,6 +26,16 @@ ax.set_xlabel("Total Rentals")
 ax.set_ylabel("Frequency")
 
 st.pyplot(fig)
+st.subheader("Hourly Bike Rental Trend")
+
+fig, ax = plt.subplots(figsize=(10,5))
+sns.lineplot(data=df, x='hr', y='cnt', ax=ax)
+ax.set_title("Hourly Bike Rental Trend")
+ax.set_xlabel("Hour of the Day")
+ax.set_ylabel("Total Rentals")
+
+st.pyplot(fig)
+
 
 #st.write("Cloud scikit-learn version:", sklearn.__version__)
 
