@@ -4,6 +4,11 @@ import pandas as pd
 import sklearn
 import matplotlib.pyplot as plt
 import seaborn as sns
+# Sidebar Navigation
+page = st.sidebar.selectbox("Select a Page", ["Prediction", "EDA"])
+
+if page == "EDA":
+    # your EDA charts here
 
 # Load data for EDA
 @st.cache_data
@@ -113,7 +118,8 @@ st.pyplot(fig)
 
 
 #st.write("Cloud scikit-learn version:", sklearn.__version__)
-
+elif page == "Prediction":
+    # your prediction UI here
 st.title("🚲 Bike Rental Prediction App")
 st.write("Enter the values below to predict bike rental demand.")
 
