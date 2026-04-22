@@ -36,6 +36,17 @@ ax.set_ylabel("Total Rentals")
 
 st.pyplot(fig)
 
+st.subheader("Bike Rentals by Weekday")
+
+fig, ax = plt.subplots(figsize=(8,5))
+sns.barplot(data=df, x='weekday', y='cnt', palette='viridis', ax=ax)
+ax.set_title("Bike Rentals by Weekday")
+ax.set_xlabel("Weekday (0 = Sunday)")
+ax.set_ylabel("Total Rentals")
+
+st.pyplot(fig)
+
+
 
 #st.write("Cloud scikit-learn version:", sklearn.__version__)
 
