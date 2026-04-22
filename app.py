@@ -92,6 +92,15 @@ ax.set_title("Boxplot for Numerical Features")
 ax.set_xticklabels(num_cols, rotation=45)
 
 st.pyplot(fig)
+st.subheader("Total Rentals vs Weather Situation")
+
+fig, ax = plt.subplots(figsize=(8,5))
+sns.boxplot(x='weathersit', y='cnt', data=df, ax=ax)
+ax.set_title("Total Rentals vs Weather Situation")
+ax.set_xlabel("Weather Situation (1=Clear, 2=Mist, 3=Light Snow/Rain, 4=Heavy Rain/Snow)")
+ax.set_ylabel("Total Rentals")
+
+st.pyplot(fig)
 
 
 #st.write("Cloud scikit-learn version:", sklearn.__version__)
